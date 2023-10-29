@@ -1,0 +1,12 @@
+# Conventions
+/_*
+
+# Editors
+.idea
+
+# Generated files
+*.pyc
+*.pyo
+__pycache__
+.hypothesis
+
