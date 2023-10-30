@@ -1,5 +1,10 @@
 # pypercrypt 📄🔐
 
+[![Checked with mypy](https://img.shields.io/badge/mypy-checked-green)](https://mypy-lang.org/)
+[![pre-commit enabled](https://img.shields.io/badge/pre--commit-enabled-success?logo=pre-commit)](./.pre-commit-config.yaml)
+[![License EUPL](https://img.shields.io/badge/license-EUPL-green)](./LICENSE)
+[![Linting: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
 `pypercrypt` uses battle-tested cryptography to encrypt your data with the passphrase of your choice
 and stores the ciphertext inside a QR code.
 
