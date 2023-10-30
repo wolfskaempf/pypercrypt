@@ -3,6 +3,8 @@ name = "pypercrypt"
 version = "0.3.0"
 description = "pypercrypt uses battle-tested cryptography to encrypt your data with the passphrase of your choice and stores the ciphertext inside a QR code."
 authors = ["Tom Wolfskämpf <tom@wolfskaempf.de>"]
+readme = "README.md"
+license = "EUPL"
 
 [tool.poetry.dependencies]
 python = "^3.11"
