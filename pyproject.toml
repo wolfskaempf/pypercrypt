@@ -1,10 +1,15 @@
 [tool.poetry]
 name = "pypercrypt"
-version = "0.3.0"
+version = "0.3.1"
 description = "pypercrypt uses battle-tested cryptography to encrypt your data with the passphrase of your choice and stores the ciphertext inside a QR code."
 authors = ["Tom Wolfskämpf <tom@wolfskaempf.de>"]
 readme = "README.md"
 license = "EUPL"
+homepage = "https://github.com/wolfskaempf/pypercrypt"
+
+[project.urls]
+"Source Code" = "https://github.com/wolfskaempf/pypercrypt"
+"Documentation" = "https://github.com/wolfskaempf/pypercrypt"
 
 [tool.poetry.dependencies]
 python = "^3.11"

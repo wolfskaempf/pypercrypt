@@ -1,5 +1,7 @@
 # pypercrypt 📄🔐
 
+![PyPI - Version](https://img.shields.io/pypi/v/pypercrypt)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pypercrypt)
 [![Checked with mypy](https://img.shields.io/badge/mypy-checked-green)](https://mypy-lang.org/)
 [![pre-commit enabled](https://img.shields.io/badge/pre--commit-enabled-success?logo=pre-commit)](./.pre-commit-config.yaml)
 [![License EUPL](https://img.shields.io/badge/license-EUPL-green)](./LICENSE)
@@ -9,17 +11,21 @@
 and stores the ciphertext inside a QR code.
 
 ```bash
+echo "Hello World" > keep-secret.txt
 pypercrypt encrypt --input-file keep-secret.txt --output-file ciphertext.json
 # Enter passphrase: password
 cat ciphertext.json
 # {"ciphertext": "gAAAAABlQCb4fKNgX3xI1LHowFUjjXhOf-83DeUgukyUAYAF-hMnQ9eFfNl_V4NBoUuu4ZfAAIkVxIM7Iq2Pfh5JaVW_E-rqXA==", "salt": "JAVWUmK_PSUbvEghki3nNQ=="}
 cat ciphertext.json | qrencode -o ciphertext.png
-# In future versions, you'll be able to output the QR code directly
+# In future versions pypercrypt will support writing to and reading from QR codes directly
+pypercrypt decrypt --input-file <(zbarimg -q --raw ciphertext.png) --output-file -
+# Enter passphrase: password
+# Hello World
 ```
 
 ![Ciphertext encoded as a QR code](./assets/ciphertext.png)
 
-Now you can store the printed QR code wherever you would trust other encrypted data to stay safe.
+You can store the printed QR code wherever you would trust other encrypted data to stay safe.
 
 # Benefits
 
@@ -32,6 +38,23 @@ Now you can store the printed QR code wherever you would trust other encrypted d
 
 A peer review is pending, so keep that in mind when using `pypercrypt` for truly sensitive data.
 Get in touch if you have the required expertise to review this tool.
+
+# Installation
+
+## pipx (Recommended)
+
+`pipx` creates a separate virtual environment for each CLI tool it installs and makes the scripts
+from the package available in your PATH. See
+[installation instructions for `pipx`](https://pypa.github.io/pipx/installation/).
+
+```bash
+pipx install pypercrypt
+```
+
+## Other
+
+You may install `pypercrypt` with any tool that can install from pypi.org.
+[See `pypercrypt` on pypi.org](https://pypi.org/project/pypercrypt/).
 
 # Roadmap
 
