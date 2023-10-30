@@ -8,6 +8,17 @@
 `pypercrypt` uses battle-tested cryptography to encrypt your data with the passphrase of your choice
 and stores the ciphertext inside a QR code.
 
+```bash
+pypercrypt encrypt --input-file keep-secret.txt --output-file ciphertext.json
+# Enter passphrase: password
+cat ciphertext.json
+# {"ciphertext": "gAAAAABlQCb4fKNgX3xI1LHowFUjjXhOf-83DeUgukyUAYAF-hMnQ9eFfNl_V4NBoUuu4ZfAAIkVxIM7Iq2Pfh5JaVW_E-rqXA==", "salt": "JAVWUmK_PSUbvEghki3nNQ=="}
+cat ciphertext.json | qrencode -o ciphertext.png
+# In future versions, you'll be able to output the QR code directly
+```
+
+![Ciphertext encoded as a QR code](./assets/ciphertext.png)
+
 Now you can store the printed QR code wherever you would trust other encrypted data to stay safe.
 
 # Benefits
@@ -36,6 +47,7 @@ Get in touch if you have the required expertise to review this tool.
 - [ ] Decrypt the data straight from an image file containing a QR code
 - [ ] Instructions on how to decrypt the data purely with standard tools
 - [ ] Maintain 100 % test-coverage of the critical code paths
+- [ ] Release v1.0 (until then the CLI and format may be subject to breaking changes)
 
 ## Later
 
