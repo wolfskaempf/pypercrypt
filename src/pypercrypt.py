@@ -82,7 +82,7 @@ def encrypt(
     input_file: Annotated[typer.FileBinaryRead, typer.Option()],
     output_file: Annotated[typer.FileTextWrite, typer.Option()],
 ) -> None:
-    """Encrypt file content and output ciphertext to stdout."""
+    """Encrypt input-file content and write ciphertext to output-file."""
     cleartext = read_cleartext_from_file(input_file)
     passphrase = input("Enter passphrase: ")
     key, salt = turn_passphrase_into_key(passphrase)
@@ -96,7 +96,7 @@ def decrypt(
     input_file: Annotated[typer.FileText, typer.Option()],
     output_file: Annotated[typer.FileBinaryWrite, typer.Option()],
 ) -> None:
-    """Decrypt file content and output cleartext to stdout."""
+    """Decrypt input-file content and write cleartext to output-file."""
     ciphertext, salt = read_ciphertext_from_file(input_file)
     passphrase = input("Enter passphrase: ")
     key, _ = turn_passphrase_into_key(passphrase, salt)
