@@ -51,3 +51,7 @@ make the scope too large.
 
 - [`papercrypt`](https://github.com/TMUniversal/papercrypt) fulfills a similar purpose, is written in Go and
   not affiliated with this project
+
+# License
+
+Licensed under the EUPL. See [LICENSE](./LICENSE).
