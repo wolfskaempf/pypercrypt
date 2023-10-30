@@ -26,15 +26,16 @@ Get in touch if you have the required expertise to review this tool.
 
 ## Now
 
-- Encrypt input data and turn it into a printable QR code
-- Decrypt the data, relying on an external QR code scanner like `zbarimg`
-- Reach 100 % test coverage of the critical code paths before adding new features
+- [x] Encrypt input data and write ciphertext to file
+- [ ] Add option to output ciphertext as a printable QR code
+- [x] Decrypt the data, relying on an external QR code scanner like `zbarimg`
+- [ ] Reach 100 % test coverage of the critical code paths before adding new features
 
 ## Next
 
-- Decrypt the data straight from an image file containing a QR code
-- Instructions on how to decrypt the data purely with standard tools
-- Maintain 100 % test-coverage of the critical code paths
+- [ ] Decrypt the data straight from an image file containing a QR code
+- [ ] Instructions on how to decrypt the data purely with standard tools
+- [ ] Maintain 100 % test-coverage of the critical code paths
 
 ## Later
 
@@ -50,7 +51,7 @@ make the scope too large.
 
 - Do not generate passphrases for the user
 - Do not add asymmetric encryption support
-- Do not add a GUI or TUI (if I can't resist, then i)
+- Do not add a GUI or TUI (if I can't resist, then do it as a separate project using `pypercrypt` as a library)
 
 # Alternatives
 
