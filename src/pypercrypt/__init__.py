@@ -1,0 +1,1 @@
+"""`pypercrypt` main package."""

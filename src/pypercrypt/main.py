@@ -102,7 +102,3 @@ def decrypt(
     key, _ = turn_passphrase_into_key(passphrase, salt)
     cleartext = decrypt_fernet(ciphertext=ciphertext, key=key)
     output_file.write(cleartext)
-
-
-if __name__ == "__main__":
-    app()

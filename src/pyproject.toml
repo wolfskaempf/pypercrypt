@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pypercrypt"
-version = "0.1.0"
+version = "0.3.0"
 description = "pypercrypt uses battle-tested cryptography to encrypt your data with the passphrase of your choice and stores the ciphertext inside a QR code."
 authors = ["Tom Wolfskämpf <tom@wolfskaempf.de>"]
 
@@ -20,10 +20,11 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.plugins]
 
-[project.scripts]
-pypercrypt = "pypercrypt:app"
+[tool.poetry.scripts]
+pypercrypt = "pypercrypt.main:app"
 
 [project]
+name = "pypercrypt"
 requires-python = ">=3.11"
 
 [tool.ruff.lint]
@@ -55,3 +56,7 @@ select = [
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
+
+[tool.ruff.flake8-copyright]
+# Avoid enforcing a header on files smaller than 1024 bytes.
+min-file-size = 1024
